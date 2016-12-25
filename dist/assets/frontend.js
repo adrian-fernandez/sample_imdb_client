@@ -2018,7 +2018,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("frontend/app")["default"].create({"SERVICES_HOST":"http://localhost:2000","name":"frontend","version":"0.0.0+9baf35e6"});
+  require("frontend/app")["default"].create({"SERVICES_HOST":"http://localhost:2000","name":"frontend","version":"0.0.0+a7be89b6"});
 }
 
 /* jshint ignore:end */
