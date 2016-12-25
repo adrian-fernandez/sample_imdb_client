@@ -26,7 +26,7 @@ export default Ember.Component.extend({
   handleFileAsDataURL: function(component, file_name, file_content){
     $.ajax({
       type: "POST",
-      url: "http://localhost:2000/movies/batch_create",
+      url: "http://imdb-backend.herokuapp.com/movies/batch_create",
       dataType: 'json',
       data: { data: file_content },
       success: function(data){
