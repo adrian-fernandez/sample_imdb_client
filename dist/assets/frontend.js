@@ -91,8 +91,8 @@ define('frontend/authenticators/custom', ['exports', 'ember', 'ember-simple-auth
           });
           _ember['default'].run(function () {
             resolve({
-              token: response.data.token,
-              userName: response.data.username
+              token: response.data.attributes.token,
+              userName: response.data.attributes.username
             });
           });
         }, function (xhr, status, error) {
@@ -687,7 +687,7 @@ define('frontend/components/x-file-input/component', ['exports', 'ember'], funct
     handleFileAsDataURL: function handleFileAsDataURL(component, file_name, file_content) {
       $.ajax({
         type: "POST",
-        url: "http://localhost:2000/movies/batch_create",
+        url: "http://imdb-backend.herokuapp.com/movies/batch_create",
         dataType: 'json',
         data: { data: file_content },
         success: function success(data) {
@@ -1432,7 +1432,7 @@ define('frontend/routes/application', ['exports', 'ember', 'ember-simple-auth/mi
 
         $.ajax({
           type: "POST",
-          url: "http://localhost:2000/movies/batch_create",
+          url: "http://imdb-backend.herokuapp.com/movies/batch_create",
           data: { data: file_content }
         });
 
@@ -1475,7 +1475,7 @@ define('frontend/routes/login', ['exports', 'ember', 'ember-simple-auth/mixins/u
         self = this;
         user.save().then(function (obj) {
           self.get('session').authenticate('authenticator:custom', { identification: obj.get('username'), password: obj.get('password') });
-          self.transitionToRoute('movies');
+          self.transitionTo('movies');
         })['catch'](function (adapterError) {
           _this.controller.set('errors', user.get('errors').toArray());
         });
@@ -2018,7 +2018,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("frontend/app")["default"].create({"SERVICES_HOST":"http://localhost:2000","name":"frontend","version":"0.0.0+f958f17c"});
+  require("frontend/app")["default"].create({"SERVICES_HOST":"http://localhost:2000","name":"frontend","version":"0.0.0+9baf35e6"});
 }
 
 /* jshint ignore:end */

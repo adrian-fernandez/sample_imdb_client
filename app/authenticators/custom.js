@@ -40,8 +40,8 @@ export default Base.extend({
         });
         Ember.run(function() {
           resolve({
-            token: response.data.token,
-            userName: response.data.username
+            token: response.data.attributes.token,
+            userName: response.data.attributes.username
           });
         });
       }, function(xhr, status, error){
