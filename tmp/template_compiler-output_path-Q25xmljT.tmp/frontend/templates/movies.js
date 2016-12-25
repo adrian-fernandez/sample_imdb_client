@@ -1,0 +1,1 @@
+export default Ember.HTMLBars.template({"id":"L6+U6q8P","block":"{\"statements\":[[\"partial\",\"movies-actions\"],[\"text\",\"\\n\\n\"],[\"partial\",\"movies-list\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":true}","meta":{"moduleName":"frontend/templates/movies.hbs"}});

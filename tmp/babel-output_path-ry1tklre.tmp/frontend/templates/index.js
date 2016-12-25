@@ -1,0 +1,3 @@
+define("frontend/templates/index", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template({ "id": "iR4fkBnV", "block": "{\"statements\":[[\"block\",[\"if\"],[[\"get\",[\"session\",\"isAuthenticated\"]]],null,0]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"  \"],[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "frontend/templates/index.hbs" } });
+});

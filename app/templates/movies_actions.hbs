@@ -1,0 +1,61 @@
+<div class="container" id="search-box">
+  <div class="row">
+    <div class="col-md-7">
+      {{#if (gt (resultsFiltered search_q search_title search_director search_actor_name search_min_rate search_max_rate search_year) 0)}}
+        <div class="panel" id="search-criteria-panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Selected search criteria</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              {{#if search_q}}
+                <li>
+                  <strong>Text:</strong> {{search_q}} <a href="#" {{action 'moviesByAllQ'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+
+              {{#if search_title}}
+                <li>
+                  <strong>Titulo:</strong> {{search_title}} <a href="#" {{action 'moviesByAllTitle'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+
+              {{#if search_director}}
+                <li>
+                  <strong>Director:</strong> {{search_director}} <a href="#" {{action 'moviesByAllDirector'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+
+              {{#if search_actor_name}}
+                <li>
+                  <strong>Actor:</strong> {{search_actor_name}} <a href="#" {{action 'moviesByAllActor'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+              {{#if search_min_rate}}
+                <li>
+                  <strong>Min. Rate:</strong> {{search_min_rate}} <a href="#" {{action 'moviesByAllMinRate'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+
+              {{#if search_year}}
+                <li>
+                  <strong>Year:</strong> {{search_year}} <a href="#" {{action 'moviesByAllYear'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+
+              {{#if search_max_rate}}
+                <li>
+                  <strong>Min. Rate:</strong> {{search_max_rate}} <a href="#" {{action 'moviesByAllMaxRate'}}>{{fa-icon "remove"}}</a>
+                </li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      {{/if}}
+
+    </div>
+    <div class="col-md-5">
+      {{#search-box movie=model searchMovies="searchMovies" title=search_title director=search_director actor_name=search_actor_name min_rate=search_min_rate max_rate=search_max_rate year=search_year}}{{/search-box}}
+    </div>
+  </div>
+</div>

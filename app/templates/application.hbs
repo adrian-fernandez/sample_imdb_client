@@ -1,0 +1,10 @@
+<div class="container" id="main-container">
+  {{#if session.isAuthenticated}}
+    {{partial 'menu'}}
+    {{outlet}}
+  {{else}}    
+    <h1 id="title">Film Collection</h1>
+
+    {{outlet}}
+  {{/if}}
+</div>

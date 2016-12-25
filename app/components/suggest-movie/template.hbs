@@ -1,0 +1,10 @@
+<h3>Suggested movies</h3>
+<hr>
+
+{{#each-in movieData in newMovie.getSuggestions}}
+  <ul id="suggested-movies">
+    <li>{{movies.title}}</li>
+  </ul>
+{{/each-in}}
+
+<hr>

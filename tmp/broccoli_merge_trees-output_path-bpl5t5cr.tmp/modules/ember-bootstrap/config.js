@@ -1,0 +1,1 @@
+/Users/adrianfernandez/Documents/projects/intuo/intuo_movies_frontend/frontend/tmp/broccoli_merge_trees-input_base_path-HAat3hXB.tmp/0/modules/ember-bootstrap/config.js

@@ -1,0 +1,42 @@
+<tr>
+  <td class="movie-poster">
+    <img src={{attrs.movie.poster}}>
+  </td>
+  <td>
+    <span {{action "toggleDetailHidden"}}>
+      {{#link-to 'movies' class="movie-title"}}
+        {{attrs.movie.title}}
+      {{/link-to}}
+    </span>
+  </td>
+
+  <td>
+    <a href="#" {{action 'moviesByDirector' attrs.movie.director.name}}>
+      {{attrs.movie.director.name}}
+    </a>
+  </td>
+
+  <td>
+    <a href="#" {{action 'moviesByYear' attrs.movie.year}}>
+      {{attrs.movie.year}}
+    </a>
+  </td>
+
+  <td>
+    {{attrs.movie.rate}}
+  </td>
+</tr>
+<tr id="movie-actor-list-{{attrs.movie.id}}" style='{{if isDetailHidden "display:none;"}}'>
+  <td colspan=5>
+    <ul>
+      <p>{{actorName}}</p>
+      {{#each attrs.movie.actors as |actor index|}}
+        <li class="actor-data">
+          <a href="#" {{action 'moviesByActor' actor.imdb_id actor.name}}>
+            <img class="zoom {{if (gte (strContains actor.name search_actor_name) 0)  "highlighted"}}" src="{{actor.photo}}" alt="{{actor.name}}" title="{{actor.name}}" onMouseOver={{action 'selectedActor' actor.name}} onmouseOut={{action 'unselectedActor'}}/>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </td>
+</tr>

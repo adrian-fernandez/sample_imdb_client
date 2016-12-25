@@ -1,0 +1,31 @@
+{{#if uploadedFile}}
+  <div class="container col-md-6 uploaded-csv-summary">
+    <h3 class='suggestions-title'>Import summary</h3>
+    <div class="row">
+      <div class="col-md-4"><strong>Uploaded movies</strong></div>
+      <div class="col-md-4"><strong>{{uploaded_movies}}</strong></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Imported movies</strong></div>
+      <div class="col-md-4"><strong>{{imported_movies}}</strong></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><strong>Failed movies</strong></div>
+      <div class="col-md-4"><strong>{{error_movies}}</strong></div>
+    </div>
+  </div>
+{{else}}
+  <div class="container col-md-6">
+    <form id="NewMovie">
+      <fieldset class="form-group">
+        <legend>Upload CSV</legend>
+        <div class="form-group">
+          <label>CSV File</label>
+          {{input value=file type="file"}}
+          <small class="form-text text-muted">CSV Format: Title,Director name,Year,Rate,Actor1;Actor2;Actor3;...;ActorX
+.</small> 
+        </div>
+      </fieldset>
+    </form>
+  </div>
+{{/if}}

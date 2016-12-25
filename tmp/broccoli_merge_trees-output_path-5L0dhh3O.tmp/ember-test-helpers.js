@@ -1,0 +1,1 @@
+/Users/adrianfernandez/Documents/projects/intuo/intuo_movies_frontend/node_modules/ember-test-helpers/lib/ember-test-helpers.js

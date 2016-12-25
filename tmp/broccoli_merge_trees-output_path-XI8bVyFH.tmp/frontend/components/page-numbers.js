@@ -1,0 +1,1 @@
+/Users/adrianfernandez/Documents/projects/intuo/intuo_movies_frontend/frontend/node_modules/ember-cli-pagination/app/components/page-numbers.js

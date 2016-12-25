@@ -1,0 +1,44 @@
+<table class="table table-over" id="movie-list">
+  <thead>
+    <tr>
+      <th class='col-md-1'>Poster</th>
+      <th class='col-md-6'>
+        <a href="#" {{action 'order' 'title' 'desc'}}>{{fa-icon "fa-angle-down"}}</a>
+        Title
+        <a href="#" {{action 'order' 'title' 'asc'}}>{{fa-icon "fa-angle-up"}}</a>
+      </th>
+      <th class='col-md-3'>Director</th>
+      <th class='col-md-1'>
+        <a href="#" {{action 'order' 'year' 'desc'}}>{{fa-icon "fa-angle-down"}}</a>
+        Year
+        <a href="#" {{action 'order' 'year' 'asc'}}>{{fa-icon "fa-angle-up"}}</a>
+      </th>
+      <th class='col-md-1'>
+        <a href="#" {{action 'order' 'rate' 'desc'}}>{{fa-icon "fa-angle-down"}}</a>
+        Rate
+        <a href="#" {{action 'order' 'rate' 'asc'}}>{{fa-icon "fa-angle-up"}}</a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |movie|}}
+    {{#movie-data movie=movie search_actor_name=search_actor_name moviesByActor=(route-action 'moviesByActor') moviesByDirector=(route-action 'moviesByDirector') moviesByYear=(route-action 'moviesByYear')}}{{/movie-data}}
+  {{/each}}
+  </tbody>
+</table>
+
+
+<nav aria-label="Page navigation">
+  <ul class="pager">
+    {{#each count as |number|}}
+      <li>
+        {{#if (eq number model.meta.pagination.self.number) }}
+          <a href='#' class='active'>{{ number }}</a>
+        {{else}}
+          {{link-to number 'movies' (query-params page=number)}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</nav>
+

@@ -1,0 +1,1 @@
+/Users/adrianfernandez/Documents/projects/intuo/intuo_movies_frontend/frontend/tmp/broccoli_merge_trees-input_base_path-eVvkXV3m.tmp/2/frontend/tests/integration/components/x-file-input/component-test.jshint.lint-test.js

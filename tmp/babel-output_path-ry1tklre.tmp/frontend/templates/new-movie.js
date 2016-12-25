@@ -1,0 +1,3 @@
+define("frontend/templates/new-movie", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template({ "id": "tL4Rw7Lr", "block": "{\"statements\":[[\"block\",[\"create-new-movie\"],null,[[\"newMovie\",\"createMovie\",\"suggestedMovies\",\"isLoadingImport\"],[[\"get\",[\"model\"]],\"createMovie\",[\"get\",[\"suggestedMovies\"]],[\"get\",[\"isLoadingImport\"]]]],0],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "frontend/templates/new-movie.hbs" } });
+});

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://intuo-frontend.herokuapp.com">Adrian - INTUO</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="">
+              {{#link-to 'movies'}}
+                <span class="glyphicon glyphicon-home"></span>Movies list
+              {{/link-to}}
+            </li>
+
+            {{#bs-dropdown tagName="li"}}
+              {{#bs-dropdown-toggle}}<span
+                class="glyphicon glyphicon-wrench"></span>Actions <span class="caret"></span>{{/bs-dropdown-toggle}}
+              {{#bs-dropdown-menu}}
+                <li>
+                  {{#link-to 'new-movie'}}
+                    New movie
+                  {{/link-to}}
+                </li>
+                <li>
+                  {{#link-to 'upload-csv'}}
+                    Upload CSV
+                  {{/link-to}}
+                </li>
+              {{/bs-dropdown-menu}}
+            {{/bs-dropdown}}
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            {{#bs-dropdown tagName="li"}}
+              {{#bs-dropdown-toggle}}<span
+                class="glyphicon glyphicon-user"></span>{{currentUsername}} <span class="caret"></span>{{/bs-dropdown-toggle}}
+              {{#bs-dropdown-menu}}
+                <li>
+                  <a href="#" {{action 'invalidateSession'}}><span class="glyphicon glyphicon-off"></span>Logout</a>
+                </li>
+              {{/bs-dropdown-menu}}
+            {{/bs-dropdown}}
+        </ul>
+    </div>
+</nav>
