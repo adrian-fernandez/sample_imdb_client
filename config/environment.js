@@ -56,7 +56,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.SERVICES_HOST = 'http://intuo-backend.herokuapp.com'
+    ENV.APP.SERVICES_HOST = 'http://imdb-frontend.herokuapp.com/'
   }
 
   return ENV;

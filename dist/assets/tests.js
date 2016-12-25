@@ -96,7 +96,7 @@ define('frontend/tests/components/x-file-input/component.jshint.lint-test', ['ex
   QUnit.module('JSHint | components/x-file-input/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/x-file-input/component.js should pass jshint.\ncomponents/x-file-input/component.js: line 31, col 46, [\'uploaded_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 32, col 46, [\'imported_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 33, col 43, [\'error_movies\'] is better written in dot notation.\n\n3 errors');
+    assert.ok(false, 'components/x-file-input/component.js should pass jshint.\ncomponents/x-file-input/component.js: line 33, col 46, [\'uploaded_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 34, col 46, [\'imported_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 35, col 43, [\'error_movies\'] is better written in dot notation.\n\n3 errors');
   });
 });
 define('frontend/tests/controllers/application.jshint.lint-test', ['exports'], function (exports) {
