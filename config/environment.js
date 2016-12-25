@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    exportApplicationGlobal: true,
     contentSecurityPolicy: {
       'connect-src': '*'
     },
