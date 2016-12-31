@@ -6,7 +6,7 @@ define('frontend/tests/adapters/application.jshint.lint-test', ['exports'], func
   QUnit.module('JSHint | adapters/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'adapters/application.js should pass jshint.');
+    assert.ok(false, 'adapters/application.js should pass jshint.\nadapters/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nadapters/application.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/app.jshint.lint-test', ['exports'], function (exports) {
@@ -15,7 +15,7 @@ define('frontend/tests/app.jshint.lint-test', ['exports'], function (exports) {
   QUnit.module('JSHint | app.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'app.js should pass jshint.');
+    assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 4, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 6, col 1, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n7 errors');
   });
 });
 define('frontend/tests/authenticators/custom.jshint.lint-test', ['exports'], function (exports) {
@@ -24,7 +24,7 @@ define('frontend/tests/authenticators/custom.jshint.lint-test', ['exports'], fun
   QUnit.module('JSHint | authenticators/custom.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'authenticators/custom.js should pass jshint.');
+    assert.ok(false, 'authenticators/custom.js should pass jshint.\nauthenticators/custom.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nauthenticators/custom.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nauthenticators/custom.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nauthenticators/custom.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nauthenticators/custom.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nauthenticators/custom.js: line 21, col 51, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n6 errors');
   });
 });
 define('frontend/tests/authorizers/custom.jshint.lint-test', ['exports'], function (exports) {
@@ -33,7 +33,7 @@ define('frontend/tests/authorizers/custom.jshint.lint-test', ['exports'], functi
   QUnit.module('JSHint | authorizers/custom.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'authorizers/custom.js should pass jshint.');
+    assert.ok(false, 'authorizers/custom.js should pass jshint.\nauthorizers/custom.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nauthorizers/custom.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nauthorizers/custom.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nauthorizers/custom.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nauthorizers/custom.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n5 errors');
   });
 });
 define('frontend/tests/components/create-new-movie/component.jshint.lint-test', ['exports'], function (exports) {
@@ -42,7 +42,7 @@ define('frontend/tests/components/create-new-movie/component.jshint.lint-test', 
   QUnit.module('JSHint | components/create-new-movie/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/create-new-movie/component.js should pass jshint.');
+    assert.ok(false, 'components/create-new-movie/component.js should pass jshint.\ncomponents/create-new-movie/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/create-new-movie/component.js: line 3, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/create-new-movie/component.js: line 3, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/create-new-movie/component.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
   });
 });
 define('frontend/tests/components/login-form/component.jshint.lint-test', ['exports'], function (exports) {
@@ -51,7 +51,7 @@ define('frontend/tests/components/login-form/component.jshint.lint-test', ['expo
   QUnit.module('JSHint | components/login-form/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/login-form/component.js should pass jshint.');
+    assert.ok(false, 'components/login-form/component.js should pass jshint.\ncomponents/login-form/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/login-form/component.js: line 3, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/login-form/component.js: line 3, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/login-form/component.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/login-form/component.js: line 12, col 91, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n5 errors');
   });
 });
 define('frontend/tests/components/movie-data/component.jshint.lint-test', ['exports'], function (exports) {
@@ -60,7 +60,7 @@ define('frontend/tests/components/movie-data/component.jshint.lint-test', ['expo
   QUnit.module('JSHint | components/movie-data/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/movie-data/component.js should pass jshint.');
+    assert.ok(false, 'components/movie-data/component.js should pass jshint.\ncomponents/movie-data/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/movie-data/component.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/movie-data/component.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
   });
 });
 define('frontend/tests/components/search-box/component.jshint.lint-test', ['exports'], function (exports) {
@@ -69,7 +69,7 @@ define('frontend/tests/components/search-box/component.jshint.lint-test', ['expo
   QUnit.module('JSHint | components/search-box/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/search-box/component.js should pass jshint.');
+    assert.ok(false, 'components/search-box/component.js should pass jshint.\ncomponents/search-box/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/search-box/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/components/show-errors/component.jshint.lint-test', ['exports'], function (exports) {
@@ -78,7 +78,7 @@ define('frontend/tests/components/show-errors/component.jshint.lint-test', ['exp
   QUnit.module('JSHint | components/show-errors/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/show-errors/component.js should pass jshint.');
+    assert.ok(false, 'components/show-errors/component.js should pass jshint.\ncomponents/show-errors/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/show-errors/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/components/suggest-movie/component.jshint.lint-test', ['exports'], function (exports) {
@@ -87,7 +87,7 @@ define('frontend/tests/components/suggest-movie/component.jshint.lint-test', ['e
   QUnit.module('JSHint | components/suggest-movie/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'components/suggest-movie/component.js should pass jshint.');
+    assert.ok(false, 'components/suggest-movie/component.js should pass jshint.\ncomponents/suggest-movie/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/suggest-movie/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/components/x-file-input/component.jshint.lint-test', ['exports'], function (exports) {
@@ -96,7 +96,7 @@ define('frontend/tests/components/x-file-input/component.jshint.lint-test', ['ex
   QUnit.module('JSHint | components/x-file-input/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/x-file-input/component.js should pass jshint.\ncomponents/x-file-input/component.js: line 31, col 46, [\'uploaded_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 32, col 46, [\'imported_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 33, col 43, [\'error_movies\'] is better written in dot notation.\n\n3 errors');
+    assert.ok(false, 'components/x-file-input/component.js should pass jshint.\ncomponents/x-file-input/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/x-file-input/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/x-file-input/component.js: line 8, col 5, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/x-file-input/component.js: line 11, col 28, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\ncomponents/x-file-input/component.js: line 12, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/x-file-input/component.js: line 13, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/x-file-input/component.js: line 14, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/x-file-input/component.js: line 16, col 29, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\ncomponents/x-file-input/component.js: line 31, col 46, [\'uploaded_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 32, col 46, [\'imported_movies\'] is better written in dot notation.\ncomponents/x-file-input/component.js: line 33, col 43, [\'error_movies\'] is better written in dot notation.\n\n11 errors');
   });
 });
 define('frontend/tests/controllers/application.jshint.lint-test', ['exports'], function (exports) {
@@ -105,7 +105,7 @@ define('frontend/tests/controllers/application.jshint.lint-test', ['exports'], f
   QUnit.module('JSHint | controllers/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/application.js should pass jshint.');
+    assert.ok(false, 'controllers/application.js should pass jshint.\ncontrollers/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/application.js: line 3, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/application.js: line 3, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/application.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
   });
 });
 define('frontend/tests/controllers/login.jshint.lint-test', ['exports'], function (exports) {
@@ -114,7 +114,7 @@ define('frontend/tests/controllers/login.jshint.lint-test', ['exports'], functio
   QUnit.module('JSHint | controllers/login.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/login.js should pass jshint.');
+    assert.ok(false, 'controllers/login.js should pass jshint.\ncontrollers/login.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/login.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/login.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
   });
 });
 define('frontend/tests/controllers/movies.jshint.lint-test', ['exports'], function (exports) {
@@ -123,7 +123,7 @@ define('frontend/tests/controllers/movies.jshint.lint-test', ['exports'], functi
   QUnit.module('JSHint | controllers/movies.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/movies.js should pass jshint.');
+    assert.ok(false, 'controllers/movies.js should pass jshint.\ncontrollers/movies.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/movies.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/movies.js: line 17, col 5, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/movies.js: line 19, col 59, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
   });
 });
 define('frontend/tests/controllers/upload-csv.jshint.lint-test', ['exports'], function (exports) {
@@ -132,7 +132,7 @@ define('frontend/tests/controllers/upload-csv.jshint.lint-test', ['exports'], fu
   QUnit.module('JSHint | controllers/upload-csv.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'controllers/upload-csv.js should pass jshint.');
+    assert.ok(false, 'controllers/upload-csv.js should pass jshint.\ncontrollers/upload-csv.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/upload-csv.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/upload-csv.js: line 12, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/upload-csv.js: line 15, col 30, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/upload-csv.js: line 16, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/upload-csv.js: line 17, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/upload-csv.js: line 18, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncontrollers/upload-csv.js: line 21, col 31, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n8 errors');
   });
 });
 define('frontend/tests/helpers/current-username.jshint.lint-test', ['exports'], function (exports) {
@@ -141,7 +141,7 @@ define('frontend/tests/helpers/current-username.jshint.lint-test', ['exports'], 
   QUnit.module('JSHint | helpers/current-username.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'helpers/current-username.js should pass jshint.');
+    assert.ok(false, 'helpers/current-username.js should pass jshint.\nhelpers/current-username.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/current-username.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/current-username.js: line 7, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
   });
 });
 define('frontend/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -262,7 +262,7 @@ define('frontend/tests/helpers/results-filtered.jshint.lint-test', ['exports'], 
   QUnit.module('JSHint | helpers/results-filtered.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'helpers/results-filtered.js should pass jshint.');
+    assert.ok(false, 'helpers/results-filtered.js should pass jshint.\nhelpers/results-filtered.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/results-filtered.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/results-filtered.js: line 8, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
   });
 });
 define('frontend/tests/helpers/start-app', ['exports', 'ember', 'frontend/app', 'frontend/config/environment'], function (exports, _ember, _frontendApp, _frontendConfigEnvironment) {
@@ -298,7 +298,7 @@ define('frontend/tests/helpers/str-contains.jshint.lint-test', ['exports'], func
   QUnit.module('JSHint | helpers/str-contains.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'helpers/str-contains.js should pass jshint.');
+    assert.ok(false, 'helpers/str-contains.js should pass jshint.\nhelpers/str-contains.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/str-contains.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/str-contains.js: line 10, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
   });
 });
 define('frontend/tests/instance-initializers/session-events.jshint.lint-test', ['exports'], function (exports) {
@@ -307,7 +307,7 @@ define('frontend/tests/instance-initializers/session-events.jshint.lint-test', [
   QUnit.module('JSHint | instance-initializers/session-events.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'instance-initializers/session-events.js should pass jshint.');
+    assert.ok(false, 'instance-initializers/session-events.js should pass jshint.\ninstance-initializers/session-events.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ninstance-initializers/session-events.js: line 2, col 3, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ninstance-initializers/session-events.js: line 3, col 3, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ninstance-initializers/session-events.js: line 12, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ninstance-initializers/session-events.js: line 13, col 3, \'object short notation\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n5 errors');
   });
 });
 define('frontend/tests/integration/components/actor-data/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -962,7 +962,7 @@ define('frontend/tests/models/actor.jshint.lint-test', ['exports'], function (ex
   QUnit.module('JSHint | models/actor.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'models/actor.js should pass jshint.');
+    assert.ok(false, 'models/actor.js should pass jshint.\nmodels/actor.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/actor.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/models/director.jshint.lint-test', ['exports'], function (exports) {
@@ -971,7 +971,7 @@ define('frontend/tests/models/director.jshint.lint-test', ['exports'], function 
   QUnit.module('JSHint | models/director.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'models/director.js should pass jshint.');
+    assert.ok(false, 'models/director.js should pass jshint.\nmodels/director.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/director.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/models/movie.jshint.lint-test', ['exports'], function (exports) {
@@ -980,7 +980,7 @@ define('frontend/tests/models/movie.jshint.lint-test', ['exports'], function (ex
   QUnit.module('JSHint | models/movie.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'models/movie.js should pass jshint.');
+    assert.ok(false, 'models/movie.js should pass jshint.\nmodels/movie.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/movie.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/movie.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
   });
 });
 define('frontend/tests/models/user.jshint.lint-test', ['exports'], function (exports) {
@@ -989,7 +989,7 @@ define('frontend/tests/models/user.jshint.lint-test', ['exports'], function (exp
   QUnit.module('JSHint | models/user.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'models/user.js should pass jshint.');
+    assert.ok(false, 'models/user.js should pass jshint.\nmodels/user.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/user.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/resolver.jshint.lint-test', ['exports'], function (exports) {
@@ -998,7 +998,7 @@ define('frontend/tests/resolver.jshint.lint-test', ['exports'], function (export
   QUnit.module('JSHint | resolver.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'resolver.js should pass jshint.');
+    assert.ok(false, 'resolver.js should pass jshint.\nresolver.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nresolver.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 define('frontend/tests/router.jshint.lint-test', ['exports'], function (exports) {
@@ -1007,7 +1007,7 @@ define('frontend/tests/router.jshint.lint-test', ['exports'], function (exports)
   QUnit.module('JSHint | router.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'router.js should pass jshint.');
+    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nrouter.js: line 17, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
   });
 });
 define('frontend/tests/routes/application.jshint.lint-test', ['exports'], function (exports) {
@@ -1016,7 +1016,7 @@ define('frontend/tests/routes/application.jshint.lint-test', ['exports'], functi
   QUnit.module('JSHint | routes/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/application.js should pass jshint.');
+    assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/application.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/application.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/application.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/application.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/application.js: line 14, col 36, \'spread/rest operator\' is only available in ES6 (use \'esversion: 6\').\n\n6 errors');
   });
 });
 define('frontend/tests/routes/index.jshint.lint-test', ['exports'], function (exports) {
@@ -1025,7 +1025,7 @@ define('frontend/tests/routes/index.jshint.lint-test', ['exports'], function (ex
   QUnit.module('JSHint | routes/index.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/index.js should pass jshint.');
+    assert.ok(false, 'routes/index.js should pass jshint.\nroutes/index.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/index.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/index.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n5 errors');
   });
 });
 define('frontend/tests/routes/login.jshint.lint-test', ['exports'], function (exports) {
@@ -1034,7 +1034,7 @@ define('frontend/tests/routes/login.jshint.lint-test', ['exports'], function (ex
   QUnit.module('JSHint | routes/login.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/login.js should pass jshint.');
+    assert.ok(false, 'routes/login.js should pass jshint.\nroutes/login.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/login.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/login.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/login.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/login.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/login.js: line 8, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/login.js: line 14, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/login.js: line 24, col 29, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n8 errors');
   });
 });
 define('frontend/tests/routes/movies.jshint.lint-test', ['exports'], function (exports) {
@@ -1043,7 +1043,7 @@ define('frontend/tests/routes/movies.jshint.lint-test', ['exports'], function (e
   QUnit.module('JSHint | routes/movies.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/movies.js should pass jshint.');
+    assert.ok(false, 'routes/movies.js should pass jshint.\nroutes/movies.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/movies.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/movies.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/movies.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/movies.js: line 5, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/movies.js: line 5, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/movies.js: line 7, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/movies.js: line 10, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n8 errors');
   });
 });
 define('frontend/tests/routes/new-movie.jshint.lint-test', ['exports'], function (exports) {
@@ -1052,7 +1052,7 @@ define('frontend/tests/routes/new-movie.jshint.lint-test', ['exports'], function
   QUnit.module('JSHint | routes/new-movie.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/new-movie.js should pass jshint.');
+    assert.ok(false, 'routes/new-movie.js should pass jshint.\nroutes/new-movie.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/new-movie.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/new-movie.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/new-movie.js: line 9, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 25, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 43, col 29, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\nroutes/new-movie.js: line 52, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 62, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 65, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/new-movie.js: line 66, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n12 errors');
   });
 });
 define('frontend/tests/routes/upload-csv.jshint.lint-test', ['exports'], function (exports) {
@@ -1061,7 +1061,7 @@ define('frontend/tests/routes/upload-csv.jshint.lint-test', ['exports'], functio
   QUnit.module('JSHint | routes/upload-csv.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'routes/upload-csv.js should pass jshint.');
+    assert.ok(false, 'routes/upload-csv.js should pass jshint.\nroutes/upload-csv.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/upload-csv.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/upload-csv.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 4, col 1, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/upload-csv.js: line 9, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 15, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 18, col 30, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\nroutes/upload-csv.js: line 19, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 20, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 21, col 9, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/upload-csv.js: line 24, col 31, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\n\n12 errors');
   });
 });
 define('frontend/tests/serializers/movie.jshint.lint-test', ['exports'], function (exports) {
@@ -1070,7 +1070,7 @@ define('frontend/tests/serializers/movie.jshint.lint-test', ['exports'], functio
   QUnit.module('JSHint | serializers/movie.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'serializers/movie.js should pass jshint.');
+    assert.ok(false, 'serializers/movie.js should pass jshint.\nserializers/movie.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nserializers/movie.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nserializers/movie.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 5, col 5, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 5, col 32, \'spread/rest operator\' is only available in ES6 (use \'esversion: 6\').\nserializers/movie.js: line 15, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 16, col 5, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 18, col 36, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\nserializers/movie.js: line 19, col 7, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 21, col 7, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 24, col 50, \'arrow function syntax (=>)\' is only available in ES6 (use \'esversion: 6\').\nserializers/movie.js: line 25, col 9, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nserializers/movie.js: line 25, col 9, \'destructuring binding\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n13 errors');
   });
 });
 define('frontend/tests/test-helper', ['exports', 'frontend/tests/helpers/resolver', 'ember-qunit'], function (exports, _frontendTestsHelpersResolver, _emberQunit) {
@@ -1092,7 +1092,7 @@ define('frontend/tests/transforms/movie.jshint.lint-test', ['exports'], function
   QUnit.module('JSHint | transforms/movie.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'transforms/movie.js should pass jshint.');
+    assert.ok(false, 'transforms/movie.js should pass jshint.\ntransforms/movie.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\n\n1 error');
   });
 });
 define('frontend/tests/unit/controllers/movies-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1197,6 +1197,25 @@ define('frontend/tests/unit/helpers/results-filtered-test.jshint.lint-test', ['e
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/results-filtered-test.js should pass jshint.');
+  });
+});
+define('frontend/tests/unit/helpers/show-errors-test', ['exports', 'frontend/helpers/show-errors', 'qunit'], function (exports, _frontendHelpersShowErrors, _qunit) {
+
+  (0, _qunit.module)('Unit | Helper | show errors');
+
+  // Replace this with your real tests.
+  (0, _qunit.test)('it works', function (assert) {
+    var result = (0, _frontendHelpersShowErrors.showErrors)([42]);
+    assert.ok(result);
+  });
+});
+define('frontend/tests/unit/helpers/show-errors-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/helpers/show-errors-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/helpers/show-errors-test.js should pass jshint.');
   });
 });
 define('frontend/tests/unit/models/movie-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -1398,7 +1417,7 @@ define('frontend/tests/views/file-picker.jshint.lint-test', ['exports'], functio
   QUnit.module('JSHint | views/file-picker.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(true, 'views/file-picker.js should pass jshint.');
+    assert.ok(false, 'views/file-picker.js should pass jshint.\nviews/file-picker.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nviews/file-picker.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
   });
 });
 /* jshint ignore:start */

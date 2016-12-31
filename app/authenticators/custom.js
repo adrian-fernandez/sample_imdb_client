@@ -36,6 +36,7 @@ export default Base.extend({
         Frontend.set('authToken', response.data.attributes.token);
         Frontend.set('userName', response.data.attributes.username);
         Ember.$.ajaxPrefilter(function( options, oriOptions, jqXHR ) {
+          jqXHR.setRequestHeader("AUTH-USER", response.data.attributes.username);
           jqXHR.setRequestHeader("AUTH-TOKEN", response.data.attributes.token);
         });
         Ember.run(function() {

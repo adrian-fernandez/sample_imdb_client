@@ -12,7 +12,11 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       this.set('importedModel', null);
       return importedModel;
     }else{
-      return this.store.createRecord('movie');     
+      if (this.get('newMovie')){
+        return this.get('newMovie');
+      }else{
+        return this.store.createRecord('movie');
+      }
     }
   },
 
@@ -32,6 +36,10 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
       movie.save().then(function(obj){
         self.controller.set('suggestedMovies', null);
         self.transitionTo('movies');
+      }, function(err){
+        self.set('newMovie', movie);
+        self.controller.set('errors', movie.get('errors').toArray());
+        self.refresh();
       }).catch((adapterError) => {
         console.log(adapterError);
         self.controller.set('errors', movie.get('errors').toArray());

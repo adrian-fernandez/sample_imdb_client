@@ -1,5 +1,0 @@
-define("ember-models-table/templates/components/models-select", ["exports"], function (exports) {
-  "use strict";
-
-  exports["default"] = Ember.HTMLBars.template({ "id": "u3Z/dzuM", "block": "{\"statements\":[[\"block\",[\"each\"],[[\"get\",[\"options\"]]],null,0],[\"yield\",\"default\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[\"default\"],\"blocks\":[{\"statements\":[[\"text\",\"  \"],[\"open-element\",\"option\",[]],[\"dynamic-attr\",\"value\",[\"concat\",[[\"get\",[\"option\"]]]]],[\"dynamic-attr\",\"selected\",[\"helper\",[\"is-equal\"],[[\"get\",[\"value\"]],[\"get\",[\"option\"]]],null],null],[\"flush-element\"],[\"append\",[\"get\",[\"option\"]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[\"option\"]}],\"hasPartials\":false}", "meta": { "moduleName": "modules/ember-models-table/templates/components/models-select.hbs" } });
-});

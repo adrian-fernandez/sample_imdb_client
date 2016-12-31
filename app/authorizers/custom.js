@@ -10,6 +10,7 @@ export default Base.extend({
     var accessToken = this.get('session.content.secure.token');
     if (this.get('session.isAuthenticated') && !Ember.isEmpty(accessToken)) {
       jqXHR.setRequestHeader('AUTH-TOKEN', Frontend.get('authToken'));
+      jqXHR.setRequestHeader('AUTH-USER', Frontend.get('userName'));
     }
   }
 });

@@ -1,3 +1,0 @@
-define("frontend/templates/login", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "FjlA6dAo", "block": "{\"statements\":[[\"append\",[\"helper\",[\"login-form\"],null,[[\"newUser\",\"registerUser\",\"errors\"],[[\"get\",[\"model\"]],\"registerUser\",[\"get\",[\"errors\"]]]]],false]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "frontend/templates/login.hbs" } });
-});

@@ -1,3 +1,0 @@
-define("frontend/templates/components/models-table/header-sorting-icons", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "9Gv11pe8", "block": "{\"statements\":[[\"open-element\",\"span\",[]],[\"dynamic-attr\",\"class\",[\"concat\",[[\"helper\",[\"if\"],[[\"get\",[\"column\",\"sortAsc\"]],[\"get\",[\"icons\",\"sort-asc\"]]],null],\" \",[\"helper\",[\"if\"],[[\"get\",[\"column\",\"sortDesc\"]],[\"get\",[\"icons\",\"sort-desc\"]]],null]]]],[\"flush-element\"],[\"close-element\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "frontend/templates/components/models-table/header-sorting-icons.hbs" } });
-});

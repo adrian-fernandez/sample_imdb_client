@@ -1,3 +1,0 @@
-define("frontend/components/movie-data/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "OYR7ya/5", "block": "{\"statements\":[[\"open-element\",\"article\",[]],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"img\",[]],[\"dynamic-attr\",\"src\",[\"arg\",[\"movie\",\"poster\"]],null],[\"flush-element\"],[\"close-element\"],[\"append\",[\"arg\",[\"movie\",\"title\"]],false],[\"text\",\"\\n    \"],[\"open-element\",\"hr\",[]],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[\"movie\"],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "frontend/components/movie-data/template.hbs" } });
-});

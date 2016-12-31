@@ -1,1 +1,0 @@
-/Users/adrianfernandez/Documents/projects/intuo/intuo_movies_frontend/frontend/tmp/funnel-input_base_path-mpygT0xb.tmp/initializers/allow-link-action.js

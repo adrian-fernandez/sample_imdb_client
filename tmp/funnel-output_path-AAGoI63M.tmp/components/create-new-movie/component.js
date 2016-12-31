@@ -1,1 +1,0 @@
-/Users/adrianfernandez/Documents/projects/intuo/intuo_movies_frontend/tmp/funnel-input_base_path-huPChKrL.tmp/components/create-new-movie/component.js

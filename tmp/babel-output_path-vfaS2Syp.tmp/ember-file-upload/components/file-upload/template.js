@@ -1,5 +1,0 @@
-define("ember-file-upload/components/file-upload/template", ["exports"], function (exports) {
-  "use strict";
-
-  exports["default"] = Ember.HTMLBars.template({ "id": "HvrlmK7e", "block": "{\"statements\":[[\"open-element\",\"input\",[]],[\"dynamic-attr\",\"id\",[\"unknown\",[\"for\"]],null],[\"static-attr\",\"type\",\"file\"],[\"dynamic-attr\",\"accept\",[\"unknown\",[\"queue\",\"accept\"]],null],[\"dynamic-attr\",\"multiple\",[\"unknown\",[\"queue\",\"multiple\"]],null],[\"dynamic-attr\",\"onchange\",[\"helper\",[\"action\"],[[\"get\",[null]],\"change\"],[[\"value\"],[\"target.files\"]]],null],[\"static-attr\",\"style\",\"display: none;\"],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"yield\",\"default\"],[\"text\",\"\\n\\n\"]],\"locals\":[],\"named\":[],\"yields\":[\"default\"],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "modules/ember-file-upload/components/file-upload/template.hbs" } });
-});
