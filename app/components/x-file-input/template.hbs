@@ -15,17 +15,24 @@
     </div>
   </div>
 {{else}}
-  <div class="container col-md-6">
-    <form id="NewMovie">
-      <fieldset class="form-group">
-        <legend>Upload CSV</legend>
-        <div class="form-group">
-          <label>CSV File</label>
-          {{input value=file type="file"}}
-          <small class="form-text text-muted">CSV Format: Title,Director name,Year,Rate,Actor1;Actor2;Actor3;...;ActorX
+  {{#if uploadingFile}}
+    <div id="loading">
+      <p>Work in progress, please wait...</p>
+      <img src='/spinner.gif'/>
+    </div>
+  {{else}}
+    <div class="container col-md-6">
+      <form id="NewMovie">
+        <fieldset class="form-group">
+          <legend>Upload CSV</legend>
+          <div class="form-group">
+            <label>CSV File</label>
+            {{input value=file type="file"}}
+            <small class="form-text text-muted">CSV Format: Title,Director name,Year,Rate,Actor1;Actor2;Actor3;...;ActorX
 .</small> 
-        </div>
-      </fieldset>
-    </form>
-  </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  {{/if}}
 {{/if}}

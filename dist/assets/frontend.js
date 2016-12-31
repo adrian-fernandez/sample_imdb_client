@@ -92,8 +92,8 @@ define('frontend/authenticators/custom', ['exports', 'ember', 'ember-simple-auth
           });
           _ember['default'].run(function () {
             resolve({
-              token: response.data.token,
-              userName: response.data.username
+              token: response.data.attributes.token,
+              userName: response.data.attributes.username
             });
           });
         }, function (xhr, status, error) {
@@ -664,6 +664,7 @@ define('frontend/components/x-file-input/component', ['exports', 'ember'], funct
   exports['default'] = _ember['default'].Component.extend({
     tagName: 'div',
     uploadedFile: false,
+    uploadingFile: false,
 
     addChangeListenerToElement: _ember['default'].on('didInsertElement', function () {
       var _this = this;
@@ -672,6 +673,7 @@ define('frontend/components/x-file-input/component', ['exports', 'ember'], funct
 
       self = this;
       input.onchange = function (event) {
+        self.set('uploadingFile', true);
         var file = event.target.files[0];
         var reader = new FileReader();
         var fileName = file.name;
@@ -687,23 +689,24 @@ define('frontend/components/x-file-input/component', ['exports', 'ember'], funct
     handleFileAsDataURL: function handleFileAsDataURL(component, file_name, file_content) {
       $.ajax({
         type: "POST",
-        url: "http://localhost:2000/movies/batch_create",
+        url: "http://imdb-backend.herokuapp.com/movies/batch_create",
         dataType: 'json',
         data: { data: file_content },
         success: function success(data) {
           component.set('uploaded_movies', data['uploaded_movies']);
           component.set('imported_movies', data['imported_movies']);
           component.set('error_movies', data['error_movies']);
+
+          component.set('uploadingFile', false);
+          component.set('uploadedFile', true);
         }
       });
-
-      component.set('uploadedFile', true);
     }
 
   });
 });
 define("frontend/components/x-file-input/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "R8gOV5mv", "block": "{\"statements\":[[\"block\",[\"if\"],[[\"get\",[\"uploadedFile\"]]],null,1,0]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"container col-md-6\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"form\",[]],[\"static-attr\",\"id\",\"NewMovie\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"fieldset\",[]],[\"static-attr\",\"class\",\"form-group\"],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"legend\",[]],[\"flush-element\"],[\"text\",\"Upload CSV\"],[\"close-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"form-group\"],[\"flush-element\"],[\"text\",\"\\n          \"],[\"open-element\",\"label\",[]],[\"flush-element\"],[\"text\",\"CSV File\"],[\"close-element\"],[\"text\",\"\\n          \"],[\"append\",[\"helper\",[\"input\"],null,[[\"value\",\"type\"],[[\"get\",[\"file\"]],\"file\"]]],false],[\"text\",\"\\n          \"],[\"open-element\",\"small\",[]],[\"static-attr\",\"class\",\"form-text text-muted\"],[\"flush-element\"],[\"text\",\"CSV Format: Title,Director name,Year,Rate,Actor1;Actor2;Actor3;...;ActorX\\n.\"],[\"close-element\"],[\"text\",\" \\n        \"],[\"close-element\"],[\"text\",\"\\n      \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]},{\"statements\":[[\"text\",\"  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"container col-md-6 uploaded-csv-summary\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"h3\",[]],[\"static-attr\",\"class\",\"suggestions-title\"],[\"flush-element\"],[\"text\",\"Import summary\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"text\",\"Uploaded movies\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"uploaded_movies\"]],false],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"text\",\"Imported movies\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"imported_movies\"]],false],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"text\",\"Failed movies\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"error_movies\"]],false],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "frontend/components/x-file-input/template.hbs" } });
+  exports["default"] = Ember.HTMLBars.template({ "id": "P5HkZJiD", "block": "{\"statements\":[[\"block\",[\"if\"],[[\"get\",[\"uploadedFile\"]]],null,3,2]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"container col-md-6\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"form\",[]],[\"static-attr\",\"id\",\"NewMovie\"],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"fieldset\",[]],[\"static-attr\",\"class\",\"form-group\"],[\"flush-element\"],[\"text\",\"\\n          \"],[\"open-element\",\"legend\",[]],[\"flush-element\"],[\"text\",\"Upload CSV\"],[\"close-element\"],[\"text\",\"\\n          \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"form-group\"],[\"flush-element\"],[\"text\",\"\\n            \"],[\"open-element\",\"label\",[]],[\"flush-element\"],[\"text\",\"CSV File\"],[\"close-element\"],[\"text\",\"\\n            \"],[\"append\",[\"helper\",[\"input\"],null,[[\"value\",\"type\"],[[\"get\",[\"file\"]],\"file\"]]],false],[\"text\",\"\\n            \"],[\"open-element\",\"small\",[]],[\"static-attr\",\"class\",\"form-text text-muted\"],[\"flush-element\"],[\"text\",\"CSV Format: Title,Director name,Year,Rate,Actor1;Actor2;Actor3;...;ActorX\\n.\"],[\"close-element\"],[\"text\",\" \\n          \"],[\"close-element\"],[\"text\",\"\\n        \"],[\"close-element\"],[\"text\",\"\\n      \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]},{\"statements\":[[\"text\",\"    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"id\",\"loading\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"p\",[]],[\"flush-element\"],[\"text\",\"Work in progress, please wait...\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"img\",[]],[\"static-attr\",\"src\",\"/spinner.gif\"],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]},{\"statements\":[[\"block\",[\"if\"],[[\"get\",[\"uploadingFile\"]]],null,1,0]],\"locals\":[]},{\"statements\":[[\"text\",\"  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"container col-md-6 uploaded-csv-summary\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"h3\",[]],[\"static-attr\",\"class\",\"suggestions-title\"],[\"flush-element\"],[\"text\",\"Import summary\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"text\",\"Uploaded movies\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"uploaded_movies\"]],false],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"text\",\"Imported movies\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"imported_movies\"]],false],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"text\",\"Failed movies\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-md-4\"],[\"flush-element\"],[\"open-element\",\"strong\",[]],[\"flush-element\"],[\"append\",[\"unknown\",[\"error_movies\"]],false],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "frontend/components/x-file-input/template.hbs" } });
 });
 define('frontend/controllers/application', ['exports', 'ember'], function (exports, _ember) {
   var service = _ember['default'].inject.service;
@@ -1431,7 +1434,7 @@ define('frontend/routes/application', ['exports', 'ember', 'ember-simple-auth/mi
 
         $.ajax({
           type: "POST",
-          url: "http://localhost:2000/movies/batch_create",
+          url: "http://imdb-backend.herokuapp.com/movies/batch_create",
           data: { data: file_content }
         });
 
@@ -1474,7 +1477,7 @@ define('frontend/routes/login', ['exports', 'ember', 'ember-simple-auth/mixins/u
         self = this;
         user.save().then(function (obj) {
           self.get('session').authenticate('authenticator:custom', { identification: obj.get('username'), password: obj.get('password') });
-          self.transitionToRoute('movies');
+          self.transitionTo('movies');
         })['catch'](function (adapterError) {
           _this.controller.set('errors', user.get('errors').toArray());
         });
@@ -2025,7 +2028,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("frontend/app")["default"].create({"SERVICES_HOST":"http://localhost:2000","name":"frontend","version":"0.0.0+f958f17c"});
+  require("frontend/app")["default"].create({"SERVICES_HOST":"http://localhost:2000","name":"frontend","version":"0.0.0+d5daf2df"});
 }
 
 /* jshint ignore:end */

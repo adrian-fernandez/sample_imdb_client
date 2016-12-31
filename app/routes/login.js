@@ -20,7 +20,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
       self = this;
       user.save().then(function(obj) {
         self.get('session').authenticate('authenticator:custom', { identification: obj.get('username'), password: obj.get('password') });
-        self.transitionToRoute('movies');
+        self.transitionTo('movies');
       }).catch((adapterError) => {
         this.controller.set('errors', user.get('errors').toArray());
       });

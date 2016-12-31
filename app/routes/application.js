@@ -19,7 +19,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 
       $.ajax({
         type: "POST",
-        url: "http://localhost:2000/movies/batch_create",
+        url: "http://imdb-backend.herokuapp.com/movies/batch_create",
         data: { data: file_content }
       });
 

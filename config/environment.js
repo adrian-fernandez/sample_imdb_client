@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    exportApplicationGlobal: true,
     contentSecurityPolicy: {
       'connect-src': '*'
     },
@@ -56,7 +57,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.SERVICES_HOST = 'http://intuo-backend.herokuapp.com'
+    ENV.APP.SERVICES_HOST = 'http://imdb-backend.herokuapp.com/'
   }
 
   return ENV;

@@ -103451,7 +103451,7 @@ define('ember-simple-auth/mixins/application-route-mixin', ['exports', 'ember', 
     sessionInvalidated: function sessionInvalidated() {
       if (!_ember['default'].testing) {
         //      window.location.replace(Configuration.baseURL);
-        this.transitionToRoute(this.get('routeAfterDeauthentication'));
+        //      this.transitionToRoute(this.get('routeAfterDeauthentication'));
         //Modified by adrian
       }
     }
